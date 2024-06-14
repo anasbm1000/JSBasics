@@ -51,89 +51,69 @@
             text-align: left;
             background-color: aliceblue;
         }
-        .card-deck .card .card-body input{
-            background-color: rgb(227, 240, 240);
-        }
-        .card-deck .card .card-footer{
-            background-color: rgb(167, 167, 176);
-        }
+        
         
     </style>
 </head>
 <body>
     <div class="container mt-5">
-        <div  class="card-deck">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">PEDIGREE Adult Food</h5>
-                    <input type="number" name="price1" id="price1" value="695" style="width:100px; font-weight:bold;" readonly>                        
-                    <input type="number" name="quantity1" id="quantity1" value="" placeholder="Enter Quantity" style="display: none; width:100px;">
-                    <input type="number" name="result1" id="result1" value="" placeholder="Result" style="display: none; width:100px;" readonly>
-                </div>
-                <div class="card-footer text-right">    
-                    <button type="button" class="btn btn-primary" onclick="showPrice(1)">No. of Items</button>
-                    <button type="button" class="btn btn-warning" onclick="totalAmount(1)">Total Amount</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">HIMALAYA Dog Food</h5>
-                    <input type="number" name="price2" id="price2" value="770" style="width:100px; font-weight:bold;" readonly>
-                    <input type="number" name="quantity2" id="quantity2" placeholder="Enter Quantity" style="display: none; width:100px;">
-                    <input type="number" name="result2" id="result2" placeholder="Result" style="display: none; width:100px;" readonly>
-                </div>
-                <div class="card-footer text-right">    
-                    <button type="button" class="btn btn-primary" onclick="showPrice(2)">No. of Items</button>
-                    <button type="button" class="btn btn-warning" onclick="totalAmount(2)">Total Amount</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">WHISKAS Kitten Food</h5>
-                    
-    
-                    <input type="number" name="price3" id="price3" value="451" style="width:100px; font-weight:bold" readonly>
-                    <input type="text" name="quantity3" id="quantity3" placeholder="Enter Quantity" style="display: none; width:100px;">
-                    <input type="text" name="result3" id="result3" placeholder="Result" style="display: none; width:100px;" readonly>
-                </div>    
-                <div class="card-footer text-right">    
-                    
-                    <button type="button" class="btn btn-primary" onclick="showPrice(3)">No. of Items</button>
-                    <button type="button" class="btn btn-warning" onclick="totalAmount(3)">Total Amount</button>
-                </div>
-            </div>
-        </div>
+        <div class="card-body">
+            <div>
+                <h5 class="card-title" style="display: inline-block;">PEDIGREE Adult Food</h5>
 
-        <div class="card-deck">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">KAYTEE Wild Bird Food</h5>
-                    
-                    <input type="number" name="price4" id="price4" value="4446" style="width:100px; font-weight:bold" readonly>
-                    <input type="number" name="quantity4" id="quantity4" placeholder="Enter Quantity" style="display: none; width:100px;">
-                    <input type="number" name="result4" id="result4" placeholder="Result" style="display: none; width:100px;" readonly>
-                </div>
-                <div class="card-footer text-right">
-                    <button type="button" class="btn btn-primary" onclick="showPrice(4)">No. of Items</button>
-                    <button type="button" class="btn btn-warning" onclick="totalAmount(4)">Total Amount</button>
-                </div>
+                <input type="number" name="price1" id="price1" value="695" style="width:100px; font-weight:bold; display: inline-block; margin-left:55px;" readonly>
+                <button type="button" onclick="showPrice(1)">No. of Items</button>                        
+                <input type="number" name="quantity1" id="quantity1" value="" placeholder="Enter Quantity" style="display: none; width:100px;">
+                <button type="button" onclick="totalAmount(1)">Total Amount</button>
+                <input type="number" name="result1" id="result1" value="" placeholder="Result" style="display: none; width:100px;" readonly>
+            </div>
+            
+            <div>
+                <h5 class="card-title" style="display: inline-block;">HIMALAYA Dog Food</h5>
+
+
+                <input type="number" name="price2" id="price2" value="770" style="width:100px; font-weight:bold; display: inline-block; margin-left:59px;" readonly>
+                <button type="button" onclick="showPrice(2)"> No. of Items</button>
+                <input type="number" name="quantity2" id="quantity2" placeholder="Enter Quantity" style="display: none; width:100px;">
+                <button type="button" onclick="totalAmount(2)"> Total Amount</button>
+                <input type="number" name="result2" id="result2" placeholder="Result" style="display: none; width:100px;" readonly>
             </div>
 
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">CC ENTERPRISES Bird Cage</h5>
-                    
-                    <input type="number" name="price5" id="price5" value="1289" style="width:100px; font-weight:bold" readonly>
-                    <input type="number" name="quantity5" id="quantity5" placeholder="Enter Quantity" style="display: none; width:100px;">
-                    <input type="number" name="result5" id="result5" placeholder="Result" style="display: none; width:100px;" readonly>
-                </div>
-                <div class="card-footer text-right">
-                    <button type="button" class="btn btn-primary" onclick="showPrice(5)">No. of Items</button>
-                    <button type="button" class="btn btn-warning" onclick="totalAmount(5)">Total Amount</button>
-                    
-                </div>
-            </div>
+            <div>
+                <h5 class="card-title" style="display: inline-block;">WHISKAS Kitten Food</h5>
+            
 
+                <input type="number" name="price3" id="price3" value="451" style="width:100px; font-weight:bold ; display: inline-block; margin-left:55px;" readonly>
+                <button type="button" onclick="showPrice(3)">No. of Items</button>
+                <input type="text" name="quantity3" id="quantity3" placeholder="Enter Quantity" style="display: none; width:100px;">
+                <button type="button" onclick="totalAmount(3)">Total Amount</button>
+                <input type="text" name="result3" id="result3" placeholder="Result" style="display: none; width:100px;" readonly>
+                                    
+            </div>
+            
+            <div>
+                <h5 class="card-title" style="display: inline-block;">KAYTEE Wild Bird Food</h5>
+            
+                <input type="number" name="price4" id="price4" value="4446" style="width:100px; font-weight:bold ; display: inline-block; margin-left:45px;" readonly>
+                <button type="button" onclick="showPrice(4)">No. of Items</button>
+                <input type="number" name="quantity4" id="quantity4" placeholder="Enter Quantity" style="display: none; width:100px; ">
+                <button type="button" onclick="totalAmount(4)">Total Amount</button>
+                <input type="number" name="result4" id="result4" placeholder="Result" style="display: none; width:100px;" readonly>
+            
+            </div>
+            
+            <div>
+                <h5 class="card-title" style="display: inline-block;">CC ENTERPRISES Bird Cage</h5>
+            
+                <input type="number" name="price5" id="price5" value="1289" style="width:100px; font-weight:bold; display: inline-block;" readonly>
+                <button type="button" onclick="showPrice(5)">No. of Items</button>
+                <input type="number" name="quantity5" id="quantity5" placeholder="Enter Quantity" style="display: none; width:100px;">
+                <button type="button" onclick="totalAmount(5)">Total Amount</button>
+                <input type="number" name="result5" id="result5" placeholder="Result" style="display: none; width:100px;" readonly>
+            
+            </div>
+            
+            
         </div>
     </div>
 
@@ -187,7 +167,7 @@
         function showPrice(itemNumber) {
             let quantityInput = document.getElementById(`quantity${itemNumber}`);
             if (quantityInput.style.display == 'none') {
-                quantityInput.style.display = 'block';
+                quantityInput.style.display = 'inline-block';
             }
             document.getElementById(`quantitybill${itemNumber}`).value = quantityInput.value;
         }
@@ -199,7 +179,7 @@
             let totalCost = document.getElementById('totalcost');
             
             if (resultInput.style.display == 'none') {
-                resultInput.style.display = 'block';
+                resultInput.style.display = 'inline-block';
             }
 
             let totalSpend = quantityInput.value * price;
@@ -207,15 +187,20 @@
             document.getElementById(`totalbill${itemNumber}`).value = totalSpend;
             document.getElementById(`quantitybill${itemNumber}`).value = quantityInput.value;
 
-
-            for (let i = 1; i <= itemNumber; i++) {
-                if(i==1){
-                    totalCost.value = document.getElementById(`totalbill${i}`).value;
-                }
-                else {
-                    totalCost.value = parseInt(totalCost.value) + parseInt(document.getElementById(`totalbill${i}`).value);
-                }
+            let finalTotalAmount = document.getElementById("totalcost");
+            if (finalTotalAmount.value == "") {
+                finalTotalAmount.value = 0;
             }
+            finalTotalAmount.value = parseInt(finalTotalAmount.value) + parseInt(totalSpend);
+
+            //for (let i = 1; i <= itemNumber; i++) {
+              //  if (i==1) {
+                //    totalCost.value = document.getElementById(`totalbill${i}`).value;
+                //}
+                //else
+                  //  totalCost.value = parseInt(totalCost.value) + parseInt(document.getElementById(`totalbill${i}`).value);
+                
+            //}
         }
     </script>
 </body>
