@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Concepts</title>
+</head>
+
+<body>
+    <input type="number" name="limit" id="limit" placeholder="Enter Limit">
+    <button onclick="printFirstNEvenNumbers()">Print</button>
+    <input type="text" name="number" id="number" style="width:300px;" readonly>
+    <script>
+
+        /*function printFirstNNumbers() {
+            let limit = document.getElementById("limit").value;
+            for (let i = 1; i <= limit; i++) {
+               // window.alert(i);
+                if(i==limit) {
+                    document.getElementById("number").value += limit;
+                }
+                else {
+                    document.getElementById("number").value += i + ",";
+                }
+            }
+        }*/
+
+        /*function printFirstNNumbers() {
+            let limit = document.getElementById("limit").value;
+            let i = 1;
+            
+            while(i<=limit){
+                //window.alert(i);
+                if(i==limit) {
+                    document.getElementById("number").value += limit;
+                }
+                else {
+                    document.getElementById("number").value += i + ",";
+                }
+                i++;
+            }
+            let i = 1;
+            let limit = document.getElementById("limit").value;
+            do {
+                if(i==limit) {
+                    document.getElementById("number").value += limit;
+                }
+                else {
+                    document.getElementById("number").value += i + ",";
+                }
+                i++;
+            } while (i <= limit)
+        }*/
+        
+        function printFirstNEvenNumbers() {
+            let limit = document.getElementById("limit").value;
+            let i = 1;
+            while(i<=limit){
+                if(i==limit && i%2==0) {
+                    document.getElementById("number").value += limit;
+                }
+                else if(i%2==0){
+                    document.getElementById("number").value += i + ",";
+                }
+                i++;
+            }
+            /*for (let i = 1; i <= limit; i++) {
+                if(i==limit && i%2==0) {
+                    document.getElementById("number").value += limit;
+                }
+                else if(i%2==0){
+                    document.getElementById("number").value += i + ",";
+                }
+            }*/
+        }
+    </script>
+</body>
+
+</html>
