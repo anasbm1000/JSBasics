@@ -44,7 +44,7 @@
             padding: 10px;
             margin: 10px;
             font-size: 15px;    
-            background-color: rgb(9, 163, 230);
+            background-color: rgb(9, 163, 230, 0.2);
             font-weight: bold;
             border-radius: 20px;
             
@@ -63,30 +63,29 @@
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgb(255, 255, 255);
         }
         .bill-container {
             width: 600px;
             margin: auto;
             padding: 20px;
-            border: 1px solid #000;
+            border: 1px solid black;
         }
-        .bill-header,
-        .bill-footer {
+        .bill-header {
+            border-bottom: 1px dashed black;
             text-align: center;
         }
         .bill-footer {
-            border-top: 1px dashed #000;
+            border-top: 1px dashed black;
             margin-top: 20px;
+            text-align: center;
         }
         .bill-info {
             display: flex;
             justify-content: space-between;
             margin: 20px 0;
         }
-        .bill-info div {
-            width: 48%;
-        }
+        
         .bill-details {
             width: 100%;
             border-collapse: collapse;
@@ -113,28 +112,35 @@
     <div class="bill-container">
         <h1 style="font-family: 'Courier New', Courier, monospace; position: relative; margin-left: 25%">Product Details</h1>
         <table>
+            <div>
+                <tr>
+                    <th>
+                        <select name="" id="nameOfProduct" onchange="generateAmount()" style="padding: 5px; font-weight: bold; font-family: 'Courier New', Courier, monospace; width: 290px;">
+                            <option value="" >Select Product</option>
+                            <option value="695" name="PEDIGREE">PEDIGREE Adult Food</option>
+                            <option value="770" name="HIMALAYA">HIMALAYA Dog Food</option>
+                            <option value="451" name="WHISKAS">WHISKAS Kitten Food</option>
+                            <option value="4446" name="KAYTEE">KAYTEE Wild Bird Food</option>
+                            <option value="1289" name="CC">CC ENTERPRISES Bird Cage</option>        
+                        </select>
+                        <input type="number" name="price" id="price" placeholder="Price" style="width:80px; font-weight:bold; margin-left:20px;" readonly>
+                        <input type="number" name="quantity" id="quantity" placeholder="Quantity" style="width: 90px;">
+                    </th>
+                </tr>
+            </div>
             <tr>
                 <th>
-                    <select name="" id="nameOfProduct" onchange="generateAmount()" style="padding: 5px; font-weight: bold; font-family: 'Courier New', Courier, monospace">
-                        <option value="" >Select Product</option>
-                        <option value="695" name="PEDIGREE">PEDIGREE Adult Food</option>
-                        <option value="770" name="HIMALAYA">HIMALAYA Dog Food</option>
-                        <option value="451" name="WHISKAS">WHISKAS Kitten Food</option>
-                        <option value="4446" name="KAYTEE">KAYTEE Wild Bird Food</option>
-                        <option value="1289" name="CC">CC ENTERPRISES Bird Cage</option>        
-                    </select>
-                    <input type="number" name="price" id="price" placeholder="Price" style="width:100px; font-weight:bold; " readonly>
-                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" >
-                        
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <input type="text" name="nameOfCustomer" id="nameOfCustomer" style="margin-left:0px; width: 400px" placeholder="Customer Name">
+                    <input type="text" name="nameOfCustomer" id="nameOfCustomer" style="margin-left:0px; width: 300px" placeholder="Customer Name">
                     <input type="number" name="result" id="result" placeholder="Total Amount" style=" width:0px; margin-left:0px; display:none;" readonly>
-                    <button type="button" style="float: right" onclick="generateAmount(), generateTotalAmount()">Proceed</button>
+                    <input type="text" name="billNo" id="billNo" style="margin-left:0px; width: 200px" placeholder="Bill No">
                 </th>
             </tr>
+                <th>
+                    <input type="date" name="dateOfBill" id="dateOfBill" style="margin-left:0px; width: 100px">
+                    <input type="time" name="timeOfBill" id="timeOfBill" style="margin-left:0px; width: 100px">
+                    <button type="button" onclick="generateAmount(), generateTotalAmount()">Proceed</button>
+                </th>
+        
         </table>
         <div class="bill-header">
             <h2>Bingo Pet Shop</h2>
@@ -142,14 +148,18 @@
         </div>
         <div class="bill-info">
             <div>
-                <p style="display: inline-block;">Bill no: <span id="billno">24-06-13-17-35-54</span></p>
-                <p>Name of Customer: 
-                    <input type="text" name="customerName" id="customerrName" style="width: 200px; margin-left: 0px; border: none; " readonly>
+                <p style="display: inline-block;">Bill no: <input type="text" name="numInBill" id="numInBill" style="width: 160px; margin-left: 0px; border: none;  display: inline; font-size: 15px" readonly>
+                </p>
+                <p style="margin-top:0px; display: inline-block">Name of Customer: 
+                    <input type="text" name="customerName" id="customerrName" style="width: 200px; margin-left: 0px; border: none;  display: inline; font-size: 15px" readonly>
                 </p>
             </div>
-            <div>
-                <p style="margin-left: 100px; margin-right: 0px; padding-right: 0px;">Date:2021-5-10</p>
-                <p style="margin-left: 100px; margin-right: 0px; padding-right: 0px;">Time:22:17:28</p>
+            <div style="width:60%;">
+                <p style="margin-right: 0px; padding-right: 0px; display: inline-block; margin-top:20px; padding-top:8px">
+                    Date: <input type="date" name="date" id="date" style="width: 100px; margin-top:10px; margin-left: 0px; border: none;  display: inline;" readonly>
+                </p>
+                <p style="margin-right: 0px; padding-right: 0px; ">
+                    Time: <input type="time" name="time" id="time" style="width: 100px; margin-left: 0px; border: none;  display: inline;" readonly></p>
             </div>
         </div>
         <table class="bill-details">
@@ -174,7 +184,7 @@
             </div>
         </div>
         <div class="bill-footer">
-            <p>Thank You <input type="text" name="customerrName" id="customerrrName" style="border: none;" readonly> for your shopping.<br>See you again!</p>
+            <p>Thank You <input type="text" name="customerrName" id="customerrrName" style="border: none; font-size: 16px; width:150px; margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px;" readonly> for your shopping.<br>See you again!</p>
         </div>
     </div>
 
@@ -185,10 +195,17 @@
             let quantity = document.getElementById("quantity").value;
             let result = document.getElementById("result");
             let name = document.getElementById("nameOfCustomer");
+            let billNumber = document.getElementById("billNo");
+            let dateInBill = document.getElementById("dateOfBill");
+            let timeInBill = document.getElementById("timeOfBill");
+
             document.getElementById("customerrrName").value = name.value;
             document.getElementById("customerrName").value = name.value;
-            price.value = nameOfProduct.value;
+            document.getElementById("numInBill").value = billNumber.value;
+            document.getElementById("date").value = dateInBill.value;
+            document.getElementById("time").value = timeInBill.value;
 
+            price.value = nameOfProduct.value;
             result.value = price.value * quantity;
             
         }
