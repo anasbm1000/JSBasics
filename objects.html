@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Concepts</title>
+</head>
+<body>
+    <!-- <input type="text" name="key" id="key" placeholder="Enter Key">
+    <input type="text" name="value" id="value" placeholder="Enter Value"> -->
+    <!-- <button type="button" onclick="addToObject()">Proceed</button> -->
+    <!-- <input type="text" name="result" id="result" placeholder="Result" readonly> -->
+    <p id = "demo"></p>
+    <script>
+        
+        /*
+        var obj = {};
+        function addToObject() {
+            var key = document.getElementById("key").value;
+            var value = document.getElementById("value").value;
+            obj[key] = value;
+
+            document.getElementById("result").value = JSON.stringify(obj);
+
+            var obj = {"name":"amal","phone":"1234567890"};
+            document.getElementById("result").value = JSON.stringify(obj);
+        }
+        */
+
+        // 1
+        /*
+        let car = "Fiat";
+        document.getElementById("demo").innerHTML = "Car : " + car;
+        */
+
+        // 2
+        /*
+        const car = {
+            name: "Fiat",
+            model: "500",
+            color: "white"
+        };
+        document.getElementById("demo").innerHTML = "Car name is " + car.name;
+        */
+        
+        //3
+        /*
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue",
+            
+        };
+        document.getElementById("demo").innerHTML = person.firstName + " " + person.lastName + " is " + person.age + " years old " 
+        + "and has eye color as " + person.eyeColor;
+        */
+        //4
+        /*
+        const person = {};
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 50;
+        person.eyeColor = "Blue";
+        document.getElementById("demo").innerHTML = person.firstName + " " + person.lastName + " is " + person.age + " years old " 
+        + "and has eye color as " + person.eyeColor;
+        or
+        
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "Blue",
+        };
+        document.getElementById("demo").innerHTML = person["firstName"] + " " + person["lastName"] + " is " + person["age"] + " years old " 
+        + "and has eye color as " + person["eyeColor"];
+        */
+        //5 Using new keyword
+
+        /*const person = new Object();
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 50;
+        person.eyeColor = "blue";
+        document.getElementById("demo").innerHTML = person.firstName + " " + person.lastName + " is " + person.age + " years old " 
+        + "and has eye color as " + person.eyeColor;
+        */
+
+        //6 x isn't the copy of person. Both share same address space
+        /*
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            age: 50,
+            eyeColor: "blue",
+        };
+
+        document.getElementById("demo").innerHTML = "Age before change : " + person.age;
+
+        const x = person;
+        x.age = 40;
+
+        document.getElementById("demo").innerHTML += "<br>Age after change : " + person.age;
+        */
+
+        
+    </script>
+</body>
+</html>
