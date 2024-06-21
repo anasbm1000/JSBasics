@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object test</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name of the Car</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Color</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="name1" onchange="showDetails1()"></td>
+            <td><input type="text" id="model1" readonly></td>
+            <td><input type="number" id="year1" readonly></td>
+            <td><input type="text" id="color1" readonly></td>
+            <td><input type="number" id="price1" readonly></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="name2" onchange="showDetails2()"></td>
+            <td><input type="text" id="model2"></td>
+            <td><input type="number" id="year2"></td>
+            <td><input type="text" id="color2"></td>
+            <td><input type="number" id="price2"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="name3" onchange="showDetails3()"></td>
+            <td><input type="text" id="model3"></td>
+            <td><input type="number" id="year3"></td>
+            <td><input type="text" id="color3"></td>
+            <td><input type="number" id="price3"></td>
+        </tr>
+    
+    </table>
+    <!-- <p id="fordDetails"></p>
+    <p id="toyotaDetails"></p>
+    <p id="bmwDetails"></p> -->
+    <input type="text" id="searchForCar" placeholder="Enter Car Name">
+    <button type="button" onclick="searchCar()">Search</button>
+    <p id = "resultantCarDetails"></p>
+
+    <script>
+        function showDetails1(){
+            const carDetails1 = {
+                "name":"Ford", 
+                "model":"Mustang", 
+                "year":"1964",
+                "color":"red",
+                "price": 11000000,
+            };
+    
+            
+            let name1 = document.getElementById('name1');
+            let model1 = document.getElementById('model1');
+            let year1 = document.getElementById('year1');
+            let color1 = document.getElementById('color1');
+            let price1 = document.getElementById('price1');
+            
+    
+            if(name1.value === "Ford"){
+                model1.value = carDetails1.model;
+                year1.value = carDetails1.year;
+                color1.value = carDetails1.color;
+                price1.value = carDetails1.price;
+            }
+            searchCar(carDetails1.name, carDetails1.model, carDetails1.year, carDetails1.color, carDetails1.price);
+        }
+
+        function showDetails2(){
+            const carDetails2 = {
+                "name":"Toyota", 
+                "model":"Camry", 
+                "year":"2020",
+                "color":"blue",
+                "price": 15000000,
+            };
+    
+            
+            let name2 = document.getElementById('name2');
+            let model2 = document.getElementById('model2');
+            let year2 = document.getElementById('year2');
+            let color2 = document.getElementById('color2');
+            let price2 = document.getElementById('price2');
+            
+    
+            if(name2.value === "Toyota"){
+                model2.value = carDetails2.model;
+                year2.value = carDetails2.year;
+                color2.value = carDetails2.color;
+                price2.value = carDetails2.price;
+            }
+
+        }
+
+        function showDetails3(){
+            const carDetails3 = {
+                "name":"BMW", 
+                "model":"X5", 
+                "year":"2022",
+                "color":"black",
+                "price": 20000000,
+            };
+    
+            
+            let name3 = document.getElementById('name3');
+            let model3 = document.getElementById('model3');
+            let year3 = document.getElementById('year3');
+            let color3 = document.getElementById('color3');
+            let price3 = document.getElementById('price3');
+            
+    
+            if(name3.value === "BMW"){
+                model3.value = carDetails3.model;
+                year3.value = carDetails3.year;
+                color3.value = carDetails3.color;
+                price3.value = carDetails3.price;
+            }
+
+        }
+
+        
+
+        function searchCar( name, model, year, color, price){
+            let searchCar = document.getElementById('searchForCar').value;
+            if(searchCar === "Ford"){
+                showDetails1();
+                document.getElementById('resultantCarDetails').innerHTML ="<br> Model of the car is "
+                +carDetails1.model + "<br> Year of launch is "+carDetails1.year + "<br> Color of the car is "
+                +carDetails1.color + "<br> Price of the car is "+carDetails1.price;
+            }
+            else if(searchCar === "Toyota"){
+                document.getElementById('resultantCarDetails').innerHTML ="<br> Model of the car is "
+                +carDetails2.model + "<br> Year of launch is "+carDetails2.year + "<br> Color of the car is "
+                +carDetails2.color + "<br> Price of the car is "+carDetails2.price;
+            }
+            else if(searchCar === "BMW"){
+                document.getElementById('resultantCarDetails').innerHTML ="<br> Model of the car is "
+                +carDetails3.model + "<br> Year of launch is "+carDetails3.year + "<br> Color of the car is "
+                +carDetails3.color + "<br> Price of the car is "+carDetails3.price;
+            }
+
+        }
+    </script>
+</body>
+</html>
