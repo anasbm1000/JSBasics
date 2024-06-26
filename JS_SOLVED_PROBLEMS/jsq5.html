@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSQ5</title>
+</head>
+<body>
+    <p>5. Write a JavaScript for loop that iterates from 0 to 15. For each iteration, 
+        it checks if the current number is odd or even, and displays a message on the screen.
+    </p>
+
+    <p id="result"></p>
+    <script>
+        for(let i=0;i<=15;i++){
+            if(i%2==0){
+                document.getElementById("result").innerHTML += i + " is even <br>";
+                window.alert(i + " is even");
+            }
+            else{
+                document.getElementById("result").innerHTML += i + " is odd <br>";
+                window.alert(i + " is odd");
+            }
+        }
+    </script>
+</body>
+</html>
