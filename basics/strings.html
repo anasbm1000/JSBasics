@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Concepts</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        //1
+        /*
+        let text = "Hello World" or 'Hello World';
+        document.getElementById("demo").innerHTML = text;
+        */
+
+        //2 Template string - 
+        /*
+        let name = "John";
+        let text = `Hello ${name}`;
+        let multiLine = `This is a string
+that spans multiple lines.`; //only visible in console
+        console.log(multiLine);
+
+        document.getElementById("demo").innerHTML = text;
+        */
+
+        //3 String length
+        /*
+        let text = "Hello World";
+        document.getElementById("demo").innerHTML = text.length;
+        */
+
+        //4 escape characters
+        /*
+        let text = "We are the so-called \"Vikings\" from the north.";
+        document.getElementById("demo").innerHTML = text;
+        */
+
+        //5 string as object
+        /*
+        // x is a string
+        let x = "John";
+
+        // y is an object
+        let y = new String("John");
+
+        document.getElementById("demo").innerHTML =  typeof x + "<br>" + typeof y;
+        document.getElementById("demo").innerHTML = (x==y); //returns true
+        //document.getElementById("demo").innerHTML = (x===y); //returns false
+        let x = new String("John");  // x is an object
+        let y = new String("John");  // y is an object
+        document.getElementById("demo").innerHTML = (x==y); //returns false. 2 objects even if they have the same value are different
+        */
+
+        //6 Char extraction methods
+        /*
+        let text = "HELLO WORLD!";
+        //let char = text.charAt(0); //returns char. Doesn't accept negative no.s. If out of range index, then return empty string
+        //let char = text.charCodeAt(0); // return ascii code of char
+        //let char = text.at(-1); //return char. If negative no., takes char in reverse. If out of range, outputs undefined
+        //let char = text[4]; //returns char at 4th index
+        //text[0] = "J"; //gives no error but string is immutable
+        //let char = text[0]; //still returns H instead of J
+        document.getElementById("demo").innerHTML = char;
+        */
+
+        //7 substring extraction
+        //let text = "Apple, Banana, Kiwi";
+        //7.1 let substr = text.slice(7, 13);     //return Banana. 7th index included. 13th is excluded
+        //let substr = text.slice(7);         //return Banana, Kiwi. 7th to end index is returned
+        //let substr = text.slice(-7);        //return a, Kiwi. When negative, starts to count from end
+        //let substr = text.slice(-12, -6);       // return Banana. -12=B, -6=" (6th index is excluded)"
+        //7.2 let substr = text.substring(7, 13);     //return Banana. Doesn't accept negative no. like above. If start>end, swap
+        //7.3 let substr = text.substr(7,6);     //return Banana. 7=> start index. 6=> length of substring
+        //document.getElementById("demo").innerHTML = substr; 
+        
+        //8 
+        // toUpperCase() & toLowerCase()
+        //document.getElementById("demo").innerHTML = text.toUpperCase();
+        //document.getElementById("demo").innerHTML = text.toLowerCase();
+        //let text1 = "Hello";
+        //let text2 = "World";
+        //let text3 = text1.concat("-", text2); //concatenate with -
+        //document.getElementById("demo").innerHTML = text3;
+
+        //9 trim - remove white spaces
+        //let text = "       Hello World!       "; 
+        //document.getElementById("demo").innerHTML = text.trim();  
+        //document.getElementById("demo").innerHTML = text.trimStart();
+        //document.getElementById("demo").innerHTML = text.trimEnd();
+        
+        //10 padding
+        //let numb = 5; //either "5"or call toString()
+        //let text = numb.toString();
+        //document.getElementById("demo").innerHTML = text.padStart(4, "0");
+        //let text = "5";
+        //let padded = text.padStart(4,"0"); //returns 0005. 4=> total length, 0=> char to be added
+        //let padded = text.padStart(4,"x"); //returns xxx5. x=> char to be added
+        //document.getElementById("demo").innerHTML = padded;
+
+        //11replace
+        //let text = "Please visit Microsoft and Microsoft!";
+        //let newText = text.replace(/Microsoft/g, "W3Schools");// replace first occurence. replaceAll()=> replace all occurences
+        // add /i to make it case insensitive. eg /MICROSOFT/i(dont use quotes) instead of "MICROSOFT"
+        //document.getElementById("demo").innerHTML = newText;
+
+        //12
+        let text = "a,b,c,d,e,f";
+        var myArray = text.split(","); // split by comma. "|" split by pipe
+        document.getElementById("demo").innerHTML = myArray;
+</script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-Else Concept</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Enter a number</td>
+                <td><input type="number" name="number" id="number"></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="checkEven()">Check Even/Odd</button></button></td>
+                <td><input type="text" placeholder="Result" name="result" id="result"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function checkEven(){
+            var number = document.getElementById("number").value;
+            var result = document.getElementById("result");
+            if(number % 2 == 0){
+                result.value = "Even number";
+            }
+            else{
+                result.value = "Odd number";
+            }
+        }
+    </script>
+</body>
+</html>

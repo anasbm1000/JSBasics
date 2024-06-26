@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Products</title>
+    <!-- Bootstrap CSS -->
+    
+    <style>
+        .card-deck .card {
+            margin-bottom: 30px;
+        }
+        .card{
+            box-shadow: 0 4px 8px 0 rgba(0.9, 0.9, 0.9, 0.9);
+            background-color: rgb(247, 247, 248);
+        }    
+        img {
+            height: 200px;
+            width: 50%;
+            object-fit: scale-down;
+            margin-left: 2%;
+            margin-top: 5%;
+        }
+
+        .card-footer .btn {
+            margin: 5px;
+        }
+
+        h1:hover {
+            color: grey;
+        }
+
+        p:hover {
+            color: rgb(13, 12, 12);
+        }
+
+        a:hover {
+            color: rgb(45, 43, 43);
+        }
+
+        a {
+            text-decoration: solid;
+            font-size: 15px;
+            color: rgb(12, 86, 131); 
+            font-weight: 600;
+        }
+        th, h3 {
+            text-align: left;
+            color: rgb(5, 63, 121);
+            padding-left: 10px;
+            padding-top: 10px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;            
+        }
+        
+        
+        td{
+            padding-right: 50px;
+            padding-top:20px;
+            padding-left:10px;
+            color: rgb(73, 75, 78);
+            font-weight:500;
+        }
+
+        .carousel-item img {
+            height: 350px;
+            width: 900px;
+        }
+
+        .footer {
+            background-color: #555956;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: rgb(13, 12, 12);
+        }
+
+        p:hover {
+            color: rgb(13, 12, 12);
+        }
+
+        li:hover {
+            color: rgb(13, 12, 12);
+        }
+        del{
+            color: rgb(117, 108, 108);
+            font-weight: bold;
+            padding-left: 10px;
+        }
+        .bg-image {
+            background-image: url('./images/bg2.jpg');
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content {
+            background: rgba(255, 255, 255, 0.7); /* White background with opacity */
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 525px;
+            margin: auto;
+        }
+
+        #resultantProductDetails {
+            font-family: serif;
+            font-weight: bold;
+            font-size: large;
+            position: relative;
+            left: 0.5%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0.9, 0.9, 0.9, 0.9);
+            color: #333;
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: rgb(55, 199, 122);">
+    <div class="bg-image"> 
+
+        <div style="margin-bottom: 20px; background: rgba(255, 255, 255, 0.5); display:block">
+            <table border="0">
+                
+                <tr style="height: 1px">
+                    <th><a class="ink-info link-offset-2 link-underline link-underline-opacity-0" href="./home.html">
+                            <h3>Home</h3>
+                        </a>
+                    </th>
+                    <th><a class="ink-info link-offset-2 link-underline link-underline-opacity-0" href="./login.html">
+                            <h3>Login</h3>
+                        </a>
+                    </th>
+                    <th><a class="ink-info link-offset-2 link-underline link-underline-opacity-0" href="./registration.html">
+                        <h3>Signup</h3>
+                        </a>
+                    </th>    
+                </tr>
+        
+            </table>
+        </div>
+    <h1 style="color: rgb(41, 42, 35); font-weight: bolder; padding-top:50px; padding-left: 50px"
+        class="text-left mb-4">Pet Products</h1>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner center">
+            <div class="carousel-item active center" data-bs-interval="4000">
+                <img src="./images/dog-carousal5.png" height="1000px" width="1000px"  class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item center" data-bs-interval="4000">
+                <img src="./images/dog-carousal6.jpg" height="1000px" width="1000px"  class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item center" data-bs-interval="4000">
+                <img src="./images/dog-carousal2.jpg" height="1000px" width="1000px"  class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item center" data-bs-interval="4000">
+                <img src="./images/dog-carousal4.jpg" height="1000px" width="1000px"  class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button> -->
+    </div>
+
+    <div class="container mt-5">
+        <div style="display: inline;">
+            <input type="number" id="unitProdAmt" onchange="availableProducts()" placeholder="Max amt per product" style="border: 1px solid black; background-color: rgb(255, 255, 255);">
+            <p id = "resultantProductDetails" style="font-family: serif; font-weight: bold; font-size: large; position: relative; left: 0.5%; margin-bottom: 20px; width: 500px;"></p>
+        </div>
+        <div class="card-deck">
+            <!-- Product 1 -->
+            <div class="card">
+                <img src="./images/food1.jpg" class="card-img-top" alt="Dog Toy">
+                <div class="card-body">
+                    <h5 class="card-title" id="pedigree">PEDIGREE Adult Food</h5>
+                    <p class="card-text">2.8 kg Dry Adult Dog Food</p>
+                    <p class="card-text">Contains Chicken And Rice </p>
+                    <p class="card-text">Shelf Life - 18 months</p>
+                    <p class="card-text"><strong> ₹695 </strong><del>₹725</del></p>
+                    <p class="card-text" style="color: red;">Hurry, Only 1 left!</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="card">
+                <img src="./images/food2.jpg" class="card-img-top" alt="Cat Food">
+                <div class="card-body">
+                    <h5 class="card-title" id="himalaya">HIMALAYA Dog Food</h5>
+                    <p class="card-text">3kg Dry dog food </p>
+                    <p class="card-text">Chicken and rice for new born dogs</p>
+                    <p class="card-text">Shelf Life - 12 months</p>
+                    <p class="card-text"><strong> ₹770</strong> <del>₹800</del></p>
+                    <p class="card-text" style="color: red;">Hurry, Only 2 left!</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="card">
+                <img src="./images/food3.jpg" class="card-img-top" alt="Bird Cage">
+                <div class="card-body">
+                    <h5 class="card-title" id="whiskas">WHISKAS Kitten Food</h5>
+                    <p class="card-text">(2-12 months) Dry Cat Food</p>
+                    <p class="card-text">Ocean Fish, nutrient rich, Minerals</p>
+                    <p class="card-text">No artificial preservatives</p>
+                    <p class="card-text"><strong> ₹451</strong> <del>₹475</del></p>
+                    <p class="card-text" style="color: red;">Get 10% off on first order</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-deck">
+            <!-- Product 4 -->
+            <div class="card">
+                <img src="./images/food4.jpg" class="card-img-top" alt="Fish Tank">
+                <div class="card-body">
+                    <h5 class="card-title" id="kaytee">KAYTEE Wild Bird Food</h5>
+                    <p class="card-text">Applicable to all life stages</p>
+                    <p class="card-text">Grains, Sunflower seeds, Vitamin A,D </p>
+                    <p class="card-text">5 pounds/ 2365.88 ml</p>
+                    <p class="card-text"><strong> ₹4446</strong> <del>₹4885</del></p>
+                    <p class="card-text" style="color: red;">40% off for booking within 04:59:59</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="card">
+                <img src="./images/birdcage1.jpg" class="card-img-top" alt="Hamster Wheel">
+                <div class="card-body">
+                    <h5 class="card-title" id="ccenter">CC ENTERPRISES Bird Cage</h5>
+                    <p class="card-text">Best for Lovebird/Pet, Parrot</p>
+                    <p class="card-text"> High quality metal. Coated with spray powder paint</p>
+                    <p class="card-text"> Easy to Hang</p>
+                    <p class="card-text"><strong> ₹1289</strong><del>₹2999</del></p>
+                    <p class="card-text" style="color: red;">Get upto 60% off by ordering now</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="card">
+                <img src="./images/birdcage2.jpg" class="card-img-top" alt="Rabbit Hutch">
+                <div class="card-body">
+                    <h5 class="card-title" id="birdcage">Hanging Birdcage</h5>
+                    <p class="card-text">Large Space[Parrot, Myna], Portable Cage </p>
+                    <p class="card-text"> Easy to assemble,clean. Durable.</p>
+                    <p class="card-text"> Easy to clean up manure</p>
+                    <p class="card-text"><strong>₹3768</strong> <del>₹3999</del></p>
+                    <p class="card-text" style="color: red;">Hurry, Only 1 left!</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-deck">
+            <!-- Product 7 -->
+            <div class="card">
+                <img src="./images/fishtank1.jpg" class="card-img-top" alt="Fish Tank">
+                <div class="card-body">
+                    <h5 class="card-title" id="pondon">PONDON Fish Tank</h5>
+                    <p class="card-text">Black glass aquarium with a space of 1.7 Gallon.</p>
+                    <p class="card-text">Rectangular shape with filter</p>
+                    <p class="card-text">Provides quick and stylish foundation</p>
+                    <p class="card-text"><strong>₹11680</strong> <del>₹15999</del></p>
+                    <p class="card-text" style="color: red;">Hurry, last one is left!!</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="card">
+                <img src="./images/fishtank2.jpg" class="card-img-top" alt="Hamster Wheel">
+                <div class="card-body">
+                    <h5 class="card-title" id="bubblefish">Bubble Fish Aquarium </h5>
+                    <p class="card-text">Deluxe Acrylic Wall Mounted</p>
+                    <p class="card-text">Includes a predrilled aquarium. <del>Pump, filtration</del></p>
+                    <p class="card-text">Can be hung virtually anywhere. </p>
+                    <p class="card-text"><strong> ₹3614</strong> <del>₹4577</del></p>
+                    <p class="card-text" style="color: red;">Get upto 20% off by ordering now</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product 9 -->
+            <div class="card">
+                <img src="./images/dogleashandcollar.jpg" class="card-img-top" alt="Rabbit Hutch">
+                <div class="card-body">
+                    <h5 class="card-title" id="dogleash">SENAPATI Dog Collar & Leash</h5>
+                    <p class="card-text">Large, Green, Nylon Material</p>
+                    <p class="card-text">Reversible and Retractable</p>
+                    <p class="card-text">Standard Harness Type that can be used everyday</p>
+                    <p class="card-text"><strong> ₹124</strong> <del>₹349</del></p>
+                    <p class="card-text" style="color: red;">5 available!!</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck">
+            <!-- Product 10 -->
+            <div class="card">
+                <img src="./images/catlitterbox.jpg" class="card-img-top" alt="Fish Tank">
+                <div class="card-body">
+                    <h5 class="card-title" id="movson">MOVSON Litter Box</h5>
+                    <p class="card-text">Plastic material, round in shape</p>
+                    <p class="card-text">Available colors - Pink, White</p>
+                    <p class="card-text">Dimensions : 5.11 x 5.11 x 5.11</p>
+                    <p class="card-text"><strong>₹441</strong> <del>₹999</del></p>
+                    <p class="card-text" style="color: blue;">Be the first customer</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product 11 -->
+            <div class="card">
+                <img src="./images/dogchewstick.jpg" class="card-img-top" alt="Hamster Wheel">
+                <div class="card-body">
+                    <h5 class="card-title" id="movson">Dog Chew Stick</h5>
+                    <p class="card-text">450g Rawhide Munchy Sticks</p>
+                    <p class="card-text">Flavours - Chicken, Liver, Milk, Mint</p>
+                    <p class="card-text">Used For Healthy breathe, teeth & gums</p>
+                    <p class="card-text"><strong>₹152</strong> <del>₹399</del></p>
+                    <p class="card-text" style="color: red;">Get upto 20% off by ordering now</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product 12 -->
+            <div class="card">
+                <img src="./images/petshampoo.jpg" class="card-img-top" alt="Rabbit Hutch">
+                <div class="card-body">
+                    <h5 class="card-title" id="shampoo">HIMALAYA Shampoo </h5>
+                    <p class="card-text">Ayurvedic proprietary medicine</p>
+                    <p class="card-text">For Dogs prevents from fleas, ticks, itching</p>
+                    <p class="card-text">Suitable for all dog breeds</p>
+                    <p class="card-text"><strong>₹495</strong> <del>₹550</del></p>
+                    <p class="card-text" style="color: red;">Get Pack of 2 at Rs. 500</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck">
+            <!-- Product 13 -->
+            <div class="card">
+                <img src="./images/petshampoo1.jpg" class="card-img-top" alt="Fish Tank">
+                <div class="card-body">
+                    <h5 class="card-title" id="caredom">CAREDOM Shampoo and Conditioner</h5>
+                    <p class="card-text">Herbal Pet, Vita Pet, Mint Pet, Pro Pet 
+                        Dogs Shampoo</p>
+                    <p class="card-text">Packed with organic conditioners</p>
+                    <p class="card-text">Perfect for dogs with allergies & sensitivities.</p>
+                    <p class="card-text"><strong>₹889</strong> <del>₹900</del></p>
+                    <p class="card-text" style="color: red;">Get Pack of 2 at Rs. 1299</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product 14 -->
+            <div class="card">
+                <img src="./images/petconditioner.jpg" class="card-img-top" alt="Hamster Wheel">
+                <div class="card-body">
+                    <h5 class="card-title" id="thepetmom">THE PET MOM Dog Shampoo</h5>
+                    <p class="card-text">Strengthen, Shine, Condition, Control Hair Fall</p>
+                    <p class="card-text">Keratin & Protein is curated to strengthen fur</p>
+                    <p class="card-text">Enriched with milk protein and soybean oil</p>
+                    <p class="card-text"><strong>₹499</strong> <del>₹1298</del></p>
+                    <p class="card-text" style="color: red;">Get Pack of 2 at Rs. 999</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product 15 -->
+            <div class="card">
+                <img src="./images/birdfeeder.jpg" class="card-img-top" alt="Rabbit Hutch">
+                <div class="card-body">
+                    <h5 class="card-title" id="trustbasket">TRUSTBASKET Bird Feeder</h5>
+                    <p class="card-text">Heavy steel mesh with rust-resistant black powder</p>
+                    <p class="card-text">Dimensions	- 18L x 8.8W x 21.5H</p>
+                    <p class="card-text">Garden, Balcony, Home, Indoor and Outdoor (Black)</p>
+                    <p class="card-text"><strong>₹249</strong> <del>₹299</del></p>
+                    <p class="card-text" style="color: blue;">Be the first to know</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="#" class="btn btn-warning">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function availableProducts() {
+            const wholeProducts = [
+                {
+                    name: 'PEDIGREE Adult Food',
+                    property1: '2.8 kg Dry Adult Dog Food',
+                    property2: 'Contains Chicken And Rice',
+                    price: 695,
+                    exclusive: 'Hurry, Only 1 left!'
+                },
+                {
+                    name: 'HIMALAYA Dog Food',
+                    property1: '3kg Dry dog food',
+                    property2: 'Chicken and rice for new born dogs',
+                    price: 770,
+                    exclusive: 'Hurry, Only 2 left!'
+                },
+                {
+                    name: 'WHISKAS Kitten Food',
+                    property1: '(2-12 months) Dry Cat Food',
+                    property2: 'Ocean Fish, nutrient rich, Minerals',
+                    price: 451,
+                    exclusive: 'Get 10% off on first order'
+                }
+            ];
+
+            var resultantProductDetails = document.getElementById("resultantProductDetails");
+            var maxAmt = document.getElementById("unitProdAmt").value;
+            const searchingProduct = wholeProducts.filter((value) => value.price<=maxAmt)
+            
+            searchingProduct.forEach(function(array){
+                console.log(array)
+                resultantProductDetails.innerHTML += array.name + "<br>";
+            })
+        }
+        
+           
+    </script>
+
+</body>
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-11">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li>bingo@petsworld.com</li>
+                    <li>+1 234 567 890</li>
+                    <li>123 Pet St, Animal City, AC 12345</li>
+                </ul>
+            </div>
+            <div class="col-md-1">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./registration.html">Sign Up</a></li>
+                </ul>
+            </div>
+            <!-- <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <div class="social-icons">
+                    <a href="#"><img src="https://via.placeholder.com/24.png?text=F" alt="Facebook"></a>
+                    <a href="#"><img src="https://via.placeholder.com/24.png?text=T" alt="Twitter"></a>
+                    <a href="#"><img src="https://via.placeholder.com/24.png?text=I" alt="Instagram"></a>
+                    <a href="#"><img src="https://via.placeholder.com/24.png?text=Y" alt="YouTube"></a>
+                </div>
+            </div> -->
+        </div>
+        <div class="row mt-3">
+            <div class="col text-center">
+                <p class="mb-0">© 2024 Pet Products. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
