@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 5</title>
+    <style>
+        th {
+            padding: 10px;
+            text-align: left;
+            color: rgb(9, 9, 8);
+        }
+
+        td {
+            padding: 20px;
+            color: rgb(9, 9, 8);
+        }
+
+        button {
+            padding: 10px;
+            margin-right: 17px;
+            background-color: rgb(223, 232, 236);
+            font-size:normal;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(229, 230, 222);">
+    <h2>Create a calculator using JavaScript</h2>
+    <center>
+        <form action="" method="post" style="margin-top: 10%;">
+            <h2>Calculator</h2>
+            <table style="background-color: rgb(129, 125, 125);">
+                <tr>
+                    <td><input type="text" name="number" id="number" placeholder="Expression" style="padding: 10px; width:216.5px;"></td>
+                </tr>
+
+            </table>
+
+            <table style="background-color: rgb(129, 125, 125);">
+                <tr>
+                    <th><button type="button" value="0" onclick="numbers('0')">0</button></th>
+                    <th><button type="button" value="1" onclick="numbers('1')">1</button></th>
+                    <th><button type="button" value="2" onclick="numbers('2')">2</button></th>
+                    <th><button type="button" value="3" onclick="numbers('3')">3</button></th>
+
+                </tr>
+                <tr>
+                    <th><button type="button" value="4" onclick="numbers('4')">4</button></th>
+                    <th><button type="button" value="5" onclick="numbers('5')">5</button></th>
+                    <th><button type="button" value="6" onclick="numbers('6')">6</button></th>
+                    <th><button type="button" value="7" onclick="numbers('7')">7</button></th>
+
+
+
+                </tr>
+                <tr>
+                    <th><button type="button" value="8" onclick="numbers('8')">8</button></th>
+                    <th><button type="button" value="9" onclick="numbers('9')">9</button></th>
+                    <th><button type="button" onclick="equalsto()">=</button></th>
+                    <th><button type="button" onclick="clears()">C</button></th>
+                    
+
+                </tr>
+                <tr>
+                    <th><button type="button" onclick="numbers('+')">+</button></th>
+                    <th><button type="button" onclick="numbers('-')">-</button></th>
+                    <th><button type="button" onclick="numbers('*')">X</button></th>
+                    <th><button type="button" onclick="numbers('/')">/</button></th>
+                    
+                </tr>
+            </table>
+        </form>
+    </center>
+    <script>
+
+        function numbers(value) {
+            document.getElementById("number").value += value;
+        }
+
+        function equalsto() {
+            let result = document.getElementById("number").value;
+            document.getElementById("number").value = eval(result);
+        }
+        function clears() {
+            document.getElementById("number").value = "";
+        }
+
+
+    </script>
+</body>
+
+</html>

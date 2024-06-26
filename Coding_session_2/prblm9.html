@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 9</title>
+</head>
+<body>
+    <h2>Example for spread operator</h2>
+
+    <p id="result"></p>
+
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        let arr_copy = [...arr];
+        arr_copy.push(6);
+        document.getElementById("result").innerHTML = 
+        "Previous array => [ " + arr + " ].  After pushing 6, <br> Old array => [ " + arr + " ].  New array => [ " + arr_copy + " ]"; 
+    </script>
+</body>
+</html>

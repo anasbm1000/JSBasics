@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 8</title>
+</head>
+<body>
+    <h2>Create an example for array method, number method, and string method</h2>
+
+    <p id = "result_arr"></p>
+    <p id="result_num"></p>
+    <p id = "result_str"></p>
+    
+
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        document.getElementById("result_arr").innerHTML = "The number of elements in the array is " + arr.length + " Push 6 => " + arr.push(6) + "=> Resultant array is [ " +  arr + " ]";
+
+        let num = 115;
+        document.getElementById("result_num").innerHTML = "The number of digits in the number " + num + " is "  + num.toString().length;
+
+        let str = "Anas bin Malik";
+        document.getElementById("result_str").innerHTML = "Uppercased string : " + str.toUpperCase() + " Sliced string : " + str.slice(5, 14);
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 4</title>
+</head>
+<body>
+    <h2>ADD, MUL, DIV, and SUB 2 numbers using JavaScript</h2>
+    <input type="number" name = "num1" id="num1" placeholder="Enter first number">
+    <input type="number" name = "num2" id="num2" placeholder="Enter second number">
+    <button onclick="Add()">ADD</button>
+    <button onclick="Sub()">SUB</button>
+    <button onclick="Mul()">MUL</button>
+    <button onclick="Div()">DIV</button>
+    <button onclick="Clear()">Clear</button><br>
+    <input type="number" name = "result" id="result" placeholder="Result">
+    <script>
+
+        function Add(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var result = parseInt(num1) + parseInt(num2);
+            document.getElementById("result").value = result;
+        }
+
+        function Sub(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var result = parseInt(num1) - parseInt(num2);
+            document.getElementById("result").value = result;
+        }
+
+        function Mul(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var result = parseInt(num1) * parseInt(num2);
+            document.getElementById("result").value = result;
+        }
+
+        function Div(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var result = parseInt(num1) / parseInt(num2);
+            document.getElementById("result").value = result;
+        }
+
+        function Clear(){
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("result").value = "";
+        }
+    </script>
+</body>
+</html>

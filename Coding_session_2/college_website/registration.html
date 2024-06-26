@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        h1 {
+            color: rgb(10, 80, 151);
+        }
+        th {
+            text-align: left;
+            color: rgb(3, 35, 68);
+            font-family:monospace;
+            font-size: 15px;
+        }
+        a {
+            text-decoration: solid;
+            padding-left: 5px;
+            padding-right: 5px;
+            background-color:cadetblue; color: rgb(12, 86, 131); 
+            font-weight: 600;
+        }
+        td{
+            padding: 10px;
+        }
+        h1:hover{
+            color: grey;
+        }
+        p:hover{
+            color: rgb(13, 12, 12);
+        }
+        a:hover{
+            color: rgb(45, 43, 43);
+        }
+        .registrationform{
+            width:900px; height:200px; padding:20px;
+        }
+        footer > div:hover{
+            color: rgb(45, 43, 43);
+        }
+    </style>
+
+</head>
+<body style="background-color: rgb(181, 228, 228);">
+    <a href="./home.html" style="font-size: 25px">Home</a>
+    <center>
+        <div style="background-color: rgba(102, 196, 220, 0.7); display: inline-flex; flex-direction: column; align-items: center; padding: 20px">
+            <h1>College of Engineering</h1>
+
+            <img src="./images/logo.jpg" height="200px" width="200px" alt="ABC logo">
+            
+            <h2 style="color: rgb(5, 73, 141);">
+                Students Registration Form
+            </h2>
+
+            <p style="color: rgb(5, 73, 141); font-size: 17px; font-family:Verdana, Geneva, Tahoma, sans-serif">
+                New comers are hereby requested to fill this form for keeping the details official
+            </p>
+        </div>
+        
+    </center>
+
+<center>
+    <div class="registrationform">
+        <form action="" method="post" style="background-color: rgb(27, 151, 182); text-align:left; padding: 20px">
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <td><input type="text" name="fname"></td>
+                    <th>Last Name</th>
+                    <td><input type="text" name="lname"></td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td><input type="radio" name="gender">Male
+                        <input type="radio" name="gender">Female
+                    </td>
+                    <th>Date of Birth</th>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <th>Place of Birth</th>
+                    <td><input type="text" name="pob"></td>
+                    <th>Nationality</th>
+                    <td><input type="radio" name="nationality">Indian
+                        <input type="radio" name="nationality">NRI</td>
+                </tr>
+                <tr>
+                    <th>Aadhaar No.</th>
+                    <td><input type="number" name="aadhaar"></td>
+                    <th>Blood Group</th>
+                    <td><input type="text" name="bloodgroup"></td>
+                </tr>
+                <tr>
+                    <th>Phone No.</th>
+                    <td><input type="number" name="phoneno"></td>
+                    <th>Course</th>
+                    <td>
+                        <select name="course" id="">
+                            <option value="" name="course">Select Course</option>
+                            <option value="" name="course">BA English</option>
+                            <option value="" name="course">BA History</option>
+                            <option value="" name="course">BA Economics</option>
+                            <option value="" name="course">BCA</option>
+                            <option value="" name="course">BSc Physics</option>
+                            <option value="" name="course">BSc Chemistry</option>
+                            <option value="" name="course">BSc Mathematics</option>        
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Last College</th>
+                    <td><input type="text" name="lastcollege"></td>
+                    <th>TC Issued Date</th>
+                    <td><input type="date" name="tcissueddate"></td>
+                    
+                </tr>
+                <tr>
+                    <th>State</th>
+                    <td>
+                        <select name="state" id="">
+                            <option value="" name="state">Select State</option>
+                            <option value="">Kerala</option>
+                            <option value="">Tamil Nadu</option>
+                            <option value="">Karnataka</option>
+                            <option value="">Maharashtra</option>
+                            <option value="">Andhra Pradesh</option>
+                            <option value="">Arunachal Pradesh</option>
+                            <option value="">Assam</option>
+                            <option value="">Bihar</option>
+                            <option value="">Chhattisgarh</option>
+                            <option value="">Goa</option>
+                            <option value="">Gujarat</option>
+                            <option value="">Haryana</option>
+                            <option value="">Himachal Pradesh</option>
+                            <option value="">Jharkhand</option>
+                            <option value="">Madhya Pradesh</option>
+                            <option value="">Manipur</option>
+                            <option value="">Meghalaya</option>
+                            <option value="">Mizoram</option>
+                            <option value="">Nagaland</option>
+                            <option value="">Odisha</option>
+                            <option value="">Punjab</option>
+                            <option value="">Rajasthan</option>
+                            <option value="">Sikkim</option>
+                            <option value="">Telangana</option>
+                            <option value="">Tripura</option>
+                            <option value="">Uttar Pradesh</option>
+                            <option value="">Uttarakhand</option>
+                            <option value="">West Bengal</option>
+                            <option value="">AN Islands</option>
+                            <option value="">Chandigarh</option>
+                            <option value="">DN Haveli and DD</option>
+                            <option value="">Lakshadweep</option>
+                            <option value="">Delhi</option>
+                            <option value="">Puducherry</option>
+                            <option value="">Ladakh</option>
+                            <option value="">Jammu and Kashmir</option>
+                        </select>
+                    </td>
+                    <th>District</th>
+                    <td>
+                        <select name="district" id="">
+                            <option value="" name="district">Select District</option>
+                            <option value="">Alappuzha</option>
+                            <option value="">Ernakulam</option>
+                            <option value="">Idukki</option>
+                            <option value="">Kannur</option>
+                            <option value="">Kasaragod</option>
+                            <option value="">Kollam</option>
+                            <option value="">Kottayam</option>
+                            <option value="">Kozhikode</option>
+                            <option value="">Malappuram</option>
+                            <option value="">Palakkad</option>
+                            <option value="">Pathanamthitta</option>
+                            <option value="">Thiruvananthapuram</option>
+                            <option value="">Thrissur</option>
+                            <option value="">Wayanad</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Name of HSS</th>
+                    <td><input type="text" name="hssname"></td>
+                    <th>Higher Secondary Mark</th>
+                    <td><input type="number" name="hssmark"></td>
+                </tr>
+                <tr>
+                    <th>Email ID</th>
+                    <td><input type="email" name="email"></td>
+                    <th>Address</th>
+                    <td>
+                        <textarea name="address" rows="5" cols="30"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Passport Size Photo</th>
+                    <td><input type="file" name="photo" value= "Upload Image"></td>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <td><input type="text" name="uname"></td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td><input type="password" name="pass"></td>
+                </tr>
+                <tr>
+                    <th><a href="./login.html"><input style="padding: 10px; margin-top:20px;" type="submit" name="submit" value = "Register"></a></th>
+                </tr>
+            </table>
+        </form>
+    
+    </div>
+</center>        
+    
+</body>
+
+<footer style="background-color: cadetblue; padding:10px; color:rgb(74, 78, 112); font-weight:bolder; margin-top: 35%">
+    <div>
+        College of Engineering <br>
+        Thrissur - 679001 <br>
+        Email - info@abc.tcr.ac.in <br>
+        Principal : 0487 - 233 4590 <br>
+        Administrative Asistatnt : 0487 - 233 0311 <br>
+        College Office : 0487 - 233 4144 <br>
+    </div>
+    <div>
+        <br> Copyright © 2014 ABC. All rights reserved.
+    </div>
+</footer>
+
+</html>

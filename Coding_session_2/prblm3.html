@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 3</title>
+</head>
+<body>
+    <h2>Print even numbers from 10 to 100</h2>
+
+    <input type="text" name="result" id="result" placeholder="Result" style="width: 860px;">
+
+    <h2>Print odd numbers from 1 to 100</h2>
+
+    <p id = "odd"></p>
+    <script>
+        
+        for(let i=10;i<=100;i++){
+            if(i%2==0){
+                
+                document.getElementById("result").value += i + ",";
+            }
+        }
+
+        for(let i=1;i<=100;i++){
+            if(i%2!=0){
+                document.getElementById("odd").innerHTML += i + ",";
+            }
+        }
+    </script>
+</body>
+</html>
